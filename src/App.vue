@@ -1,28 +1,59 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Dashboard></Dashboard>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Dashboard from "@/components/Dashboard";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {Dashboard}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+@import "./assets/fonts/PTSans/PTSans.css"
+@import "./assets/libs/animate/animate.css"
+
+*
+  -webkit-font-smoothing: subpixel-antialiased
+  -moz-osx-font-smoothing: grayscale
+  box-sizing: border-box
+
+body
+  background: #eef2f6
+  margin: 0
+  overflow-x: hidden
+
+h1
+  font-family: PTSansBold
+  font-size: 24px
+  font-weight: 500
+  font-style: normal
+  line-height: 1
+  text-transform: uppercase
+  color: #333333
+  text-align: center
+  margin:
+    top: 20px
+    bottom: 40px
+h2
+  font-family: PTSansBold
+  font-size: 18px
+  font-weight: 500
+  font-style: normal
+  line-height: 1
+  color: #333333
+  margin:
+    top: 25px
+    bottom: 25px
+
+.table td,
+.table th
+  border: 1px solid #dee2e6 !important
+
+th[scope="col"]
+  display: none
 </style>
